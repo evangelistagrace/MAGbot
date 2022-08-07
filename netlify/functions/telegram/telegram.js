@@ -19,7 +19,7 @@ exports.handler = async (event, context) => {
             }
         })
 
-        let telegram_messsage = `[NEW CASE]\nCase#${case_id}: ${case_title}\nType: ${case_type}\nCategory: ${case_category} [${case_type_detail}]`
+        let telegram_message = `[NEW CASE]\nCase#${case_id}: ${case_title}\nType: ${case_type}\nCategory: ${case_category} [${case_type_detail}]`
 
         access_token = response.data.access_token
 
