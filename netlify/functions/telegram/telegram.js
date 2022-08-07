@@ -23,7 +23,17 @@ exports.handler = async (event, context) => {
 
         console.log('access_token: ', access_token)
         
-        
+        /* GET RELEASE KEY */
+        response = await axios.get(`${base_url}/odata/Releases?$filter=ProcessKey eq \'${process_name}\'`, {
+            headers: {
+                'Authorization': `Bearer ${access_token}`,
+                'X-UIPATH-OrganizationUnitId': process.env.org_unit_id
+            }
+        })
+
+        release_key = response.data.value[0]['Key']
+
+        console.log('release_key: ', release_key)
 
         return {
             statusCode: 204,
