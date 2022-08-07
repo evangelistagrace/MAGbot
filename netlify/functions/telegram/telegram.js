@@ -53,8 +53,13 @@ exports.handler = async (event, context) => {
             console.log('Job started!')
         }
 
+        return {
+            statusCode: 204,
+            body: JSON.stringify({ message: "OK" }),
+        }
+
     } catch (err) {
-        console.log(err)
+        return { statusCode: 500, body: err.toString() };
     }
 }
 
