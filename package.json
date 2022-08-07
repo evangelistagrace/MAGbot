@@ -1,0 +1,23 @@
+{
+  "name": "magbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-telegram-noti": "node ./send-telegram-notifications/start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evangelistagrace/magbot-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evangelistagrace/magbot-app/issues"
+  },
+  "homepage": "https://github.com/evangelistagrace/magbot-app#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1"
+  }
+}
