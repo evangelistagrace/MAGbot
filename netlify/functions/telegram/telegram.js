@@ -37,11 +37,11 @@ exports.handler = async (event, context) => {
 
         /* START JOB */
         response = await axios.post(`${base_url}/odata/Jobs/UiPath.Server.Configuration.OData.StartJobs`, {
-            "startInfo": {
-                "ReleaseKey": release_key,
-                "Strategy": "ModernJobsCount",
-                "JobsCount": "1",
-                "InputArguments": `[NEW CASE]\nCase#${case_id}: ${case_title}\nType: ${case_type}\nCategory: ${case_category} [${case_type_detail}]`
+            'startInfo': {
+                'ReleaseKey': release_key,
+                'Strategy': 'ModernJobsCount',
+                'JobsCount': '1',
+                'InputArguments': `[NEW CASE]\nCase#${case_id}: ${case_title}\nType: ${case_type}\nCategory: ${case_category} [${case_type_detail}]`
             } 
         }, {
             headers: {
