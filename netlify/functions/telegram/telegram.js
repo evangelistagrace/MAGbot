@@ -47,7 +47,9 @@ exports.handler = async (event, context) => {
             headers: {
                 'Authorization': `Bearer ${access_token}`,
                 'X-UIPATH-OrganizationUnitId': process.env.org_unit_id,
-                'X-UIPATH-Tenant': process.env.tenant_name
+                'X-UIPATH-Tenant': process.env.tenant_name,
+                'Content-Type': 'application/json'
+
             }
         })
 /*
