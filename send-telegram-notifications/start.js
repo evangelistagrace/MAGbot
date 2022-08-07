@@ -35,10 +35,11 @@ async function get_access_release() {
 
         /* START JOB */
         response = await axios.post(`${base_url}/odata/Jobs/UiPath.Server.Configuration.OData.StartJobs`, {
-            'startInfo': {
-                'ReleaseKey': release_key,
-                'Strategy': 'ModernJobsCount',
-                'JobsCount': '1'
+            "startInfo": {
+                "ReleaseKey": release_key,
+                "Strategy": "ModernJobsCount",
+                "JobsCount": "1",
+                "InputArguments": "{'textArg': 'Hello from app'}"
             } 
         }, {
             headers: {
