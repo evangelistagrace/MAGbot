@@ -10,12 +10,16 @@ access_token_req_data = `grant_type=client_credentials&client_id=${process.env.c
 
 exports.handler = async (event, context) => {
     try {
+        let {case_id, case_title, case_category, case_type, case_type_detail} = JSON.parse(event.body)
+
         /* GET ACCESS TOKEN */
         let response = await axios.post('https://cloud.uipath.com/identity_/connect/token', access_token_req_data, {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             }
         })
+
+        let telegram_messsage = `[NEW CASE]\nCase#${case_id}: ${case_title}\nType: ${case_type}\nCategory: ${case_category} [${case_type_detail}]`
 
         access_token = response.data.access_token
 
@@ -39,7 +43,7 @@ exports.handler = async (event, context) => {
                 "ReleaseKey": release_key,
                 "Strategy": "ModernJobsCount",
                 "JobsCount": "1",
-                "InputArguments": "{'textArg': 'Hello from app'}"
+                "InputArguments": `{'textArg': '${telegram_message}'}`
             } 
         }, {
             headers: {
