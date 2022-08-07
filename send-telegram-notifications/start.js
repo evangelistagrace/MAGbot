@@ -1,7 +1,7 @@
 const axios = require("axios").default;
 require('dotenv').config()
 
-const process_name = 'cat.facts',
+const process_name = 'Send.Telegram.Notifications',
 base_url = `https://cloud.uipath.com/${process.env.org_name}/${process.env.tenant_name}/orchestrator_`
 
 let access_token='',
@@ -22,7 +22,7 @@ async function get_access_release() {
         console.log('access_token: ', access_token)
         
         /* GET RELEASE KEY */
-        response = await axios.get(`${base_url}/odata/Releases?$filter=ProcessKey eq '${process_name}'`, {
+        response = await axios.get(`${base_url}/odata/Releases?$filter=ProcessKey eq \'${process_name}\'`, {
             headers: {
                 'Authorization': `Bearer ${access_token}`,
                 'X-UIPATH-OrganizationUnitId': process.env.org_unit_id
