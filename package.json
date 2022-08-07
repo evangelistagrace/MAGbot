@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start-telegram-noti": "node ./send-telegram-notifications/start.js"
+    "start-telegram-noti": "node ./send-telegram-notifications/start.js",
+    "push": "git add . && git commit -m \"commit\" && git push",
+    "deploy": "npm run push && netlify deploy --prod",
+    "dev": "netlify dev --live"
   },
   "repository": {
     "type": "git",

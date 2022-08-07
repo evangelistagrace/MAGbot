@@ -8,6 +8,8 @@ let access_token='',
 release_key='',
 access_token_req_data = `grant_type=client_credentials&client_id=${process.env.client_id}&client_secret=${process.env.client_secret}&scope=OR.Execution+OR.Folders+OR.Jobs+OR.Machines+OR.Queues+OR.Robots`;
 
+
+const url = 'https://api.telegram.org/bot';
 exports.handler = async (event, context) => {
     try {
         let {case_id, case_title, case_category, case_type, case_type_detail} = JSON.parse(event.body)
