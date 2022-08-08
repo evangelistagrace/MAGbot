@@ -1,4 +1,13 @@
 node_modules
 .env
+
+# uipath studio
+.local
+.objects
+.entities
+.templates
+.project
+.settings
+
 # Local Netlify folder
 .netlify
