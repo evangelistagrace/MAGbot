@@ -1,7 +1,7 @@
 const axios = require("axios").default;
 require('dotenv').config()
 
-const process_name = 'Send.Telegram.Notifications',
+const process_name = 'CRM.Ticket.Assignment',
 base_url = `https://cloud.uipath.com/${process.env.org_name}/${process.env.tenant_name}/orchestrator_`
 
 let access_token='',
