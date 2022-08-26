@@ -19,7 +19,7 @@ exports.handler = async (event, context) => {
             }
         })
 
-        let telegram_message = `[NEW CASE]\nCase#${case_id}: ${case_title}\nType: ${case_type}\nCategory: ${case_category} [${case_type_detail}]`
+        //let telegram_message = `[NEW CASE]\nCase#${case_id}: ${case_title}\nType: ${case_type}\nCategory: ${case_category} [${case_type_detail}]`
 
         access_token = response.data.access_token
 
@@ -43,7 +43,7 @@ exports.handler = async (event, context) => {
                 "ReleaseKey": release_key,
                 "Strategy": "ModernJobsCount",
                 "JobsCount": "1",
-                "InputArguments": `{'textArg': '${telegram_message}'}`
+                "InputArguments": `{'case_id': '${case_id}', 'case_title': '${case_title}', 'case_category': '${case_category}', 'case_type': '${case_type}', 'case_type_detail': '${case_type_detail}'}`
             } 
         }, {
             headers: {
