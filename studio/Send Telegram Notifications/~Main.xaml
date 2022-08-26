@@ -7,7 +7,7 @@
     <x:Property Name="case_type_detail" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>873.333333333333,1024.66666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>873.333333333333,1482.66666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="76">
@@ -102,7 +102,7 @@
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="476,960" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="476,1418" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="5501440250:AAE5qQw3R7H4HAg3Ymjf-cnFSm0INxqbJ2A" Name="TELEGRAM_BOT_TOKEN" />
       <Variable x:TypeArguments="x:String" Name="telegram_response" />
@@ -167,13 +167,13 @@
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Edge: MMU Service Desk" sap:VirtualizedContainerService.HintSize="434,532.666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="b7f7dd13-2327-4dfd-b1eb-2be14d53f9e4" Version="V2">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Edge: MMU Service Desk" sap:VirtualizedContainerService.HintSize="434,990.666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="b7f7dd13-2327-4dfd-b1eb-2be14d53f9e4" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,314.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,772.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -190,6 +190,28 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,220" IsPassword="True" ScopeIdentifier="b7f7dd13-2327-4dfd-b1eb-2be14d53f9e4" Text="V01040" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="http://49.236.192.14:8500/psp/CRMUAT/EMPLOYEE/CRM/h/?tab=DEFAULT&amp;cmd=login&amp;errorCode=106&amp;languageCd=ENG" DesignTimeRectangle="944, 528, 186, 30" ElementType="InputBoxPassword" FriendlyName="'INPUT pwd'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' idx='2' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='password' tag='INPUT' class='pslogineditbox' aaname='Password' /&gt;" Guid="5fedc2db-b1fa-4586-9d95-3abfd6aa6769" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAL4AAAAiCAYAAADh0GOlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAACdSURBVHhe7dKxDcMwAAPBTK3NVTtQE9hyJtDfAexY/mfOeZnVJnxLTviW3Cv8MYbZcds7f4S/DnCiPf5f+KLndPf4hU+G8EkSPknCJ0n4JAmfJOGTJHyShE+S8EkSPknCJ0n4JAmfJOGTJHyShE+S8EkSPknCJ0n4JAmfJOGTJHyShE/S3/DFz8nu0a89wl9bB7PTtnf+Ct/s/M3rC8wnhez8GfY1AAAAAElFTkSuQmCC" InformativeScreenshot="d8c34c5020bf5ce2d69ff9837d97388a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='MMU Service Desk' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="852, 533, 85, 20" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' idx='2' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='psloginlabel' aaname='Password' check:innerText='Password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFkAAAAYCAYAAACRD1FmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAH7SURBVGhD7ZVNjsMgDIVzw0hznypH4SbpPbrILbJmoAH8jA0DaoM0Eotv4/r32aHLeZ52ci9T5AFMkQcwRR7AFHkAU+QBcJGfm12WpcxjZ8GTnN1uQavVHMneJ7Lnx9gDYybAt0R2bE+ImQBdIq/WvMDueRm7KgnQnlCu/TAr93GwPK1+hR73R/Tf7B59z8Oan2DHp07pOT8c6sPlw+ODPFQz+N0isiZwBITWhItgM21+NAgJQzZmh/6irVYDBSz5XXlgeQUaRK4TG06bVJuLi9KvSV5eq59SN1t2GjDNE2LRryCougzwfQM6kZhc+M9Ezgsm+DWpIjuwOKfVz5GJJ64ufEX5MsiPFnYhFyyPhdAW/0b72h1dIsvBc2ERaE7Nmw/a4ZeGuWrEodfHFuw+hoQTX57yn5H/Vl5ILc+nb7KAX17LBYiL8ygD/+1HtVdjwmC+Hgjr7LgIH/cPRaaE8VI8NZEZcLUYLyj4iUUIcbidx+TC1Z6Lisj5b33PRZ/I9E7j8xFzaH4O0VCrn7SzGFhKNQZq4GLkH58UmdVIefiX/SWRcaMalENcF4OGaPW74EPRlWuLJmo1UJiqyPlTqfA1kUWx96dJQ1YvzyPetA4/By0Z+4WeCnFajfzJqot8wY/M96DPzkWe3MIUeQBT5AFMkQcwRb6d0/4ClC9HUcuQmewAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Sign In'" sap:VirtualizedContainerService.HintSize="334,158" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b7f7dd13-2327-4dfd-b1eb-2be14d53f9e4" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://49.236.192.14:8500/psp/CRMUAT/EMPLOYEE/CRM/h/?tab=DEFAULT&amp;cmd=login&amp;errorCode=106&amp;languageCd=ENG" DesignTimeRectangle="944, 582, 81, 27" ElementType="Button" FriendlyName="'Sign In'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' idx='2' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='5' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='submit' tag='INPUT' class='psloginbutton' aaname='Sign In' check:text='Sign In' /&gt;" Guid="a88fc914-7fd2-4ce5-b2f4-dc8a4d55f1d6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFUAAAAfCAYAAACWNoFQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAGfSURBVGhD7ZpRkoMgDIb3tB7KI9Rr0DPYE7RvvvHMakclxB+wFFZck5lvpq2Uwtck0pn+aK2NkBeRWgCRWoBV6jAMwhcopbDUpmmERNq2Fam5EakFEKkFEKkFyCf1/jTbeBrFx916o5erd3btLyDrLPX5WaSq17xKGNr0NzJepO6ASPKG7k2H3nsEp5AaWKTNYJKtgUx1Mv79RaixgcxPHx18v1slrCoQaL3fzsnIKnVXRkKpnekj6Y6k4ohIiEjF8ZnYDD3VJ8SzECSVbHSVx+bFUu2NsHvYV+0cgKjUhDkZWW5UDSlTFDYjR4BUW27stEDGIqnuRkGrQESkJs3JyCR1YUfWhqRu2ke8pwbHIiJSk+ZkZJbKQGUtUmPQzAwf9M1LbV7bSOVzkLEXkuo281AEN4AyeseN6t9K9fdRErSs4QY8c0zrWR5eS+oMWSwNd5Ej3g2wQ/e7XYBNXUpqEdI2dTRVSPUestes+vyn4pHUkamk/GDs+flbERWVvy11J5aj2ImovKeeE5FaAJFaACh1+ofFdEFIZyNVyIU2v3HUD3i0pQC0AAAAAElFTkSuQmCC" InformativeScreenshot="ad08f7eead66c30b91e2a2bd35ebb823.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='MMU Service Desk' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="944, 528, 186, 30" ElementType="InputBoxPassword" FriendlyName="'INPUT pwd'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' idx='2' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='password' tag='INPUT' class='pslogineditbox' aaname='Password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAL4AAAAiCAYAAADh0GOlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAACdSURBVHhe7dKxDcMwAAPBTK3NVTtQE9hyJtDfAexY/mfOeZnVJnxLTviW3Cv8MYbZcds7f4S/DnCiPf5f+KLndPf4hU+G8EkSPknCJ0n4JAmfJOGTJHyShE+S8EkSPknCJ0n4JAmfJOGTJHyShE+S8EkSPknCJ0n4JAmfJOGTJHyShE/S3/DFz8nu0a89wl9bB7PTtnf+Ct/s/M3rC8wnhez8GfY1AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
