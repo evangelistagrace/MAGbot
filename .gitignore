@@ -11,3 +11,7 @@ node_modules
 
 # Local Netlify folder
 .netlify
+
+# local dev folder
+local
+local/*
