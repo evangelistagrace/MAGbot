@@ -56,7 +56,7 @@ exports.handler = async (event, context) => {
         }
 
         console.log(response.status, response.statusText)
-        console.log("case id: " + case_id, case_title, case_category, case_type, case_type_detail)
+        console.log("case id: " + case_id, case_title, case_category, case_type, case_detail)
 
         return {
             statusCode: 204,
