@@ -2,11 +2,11 @@ const axios = require("axios").default;
 require('dotenv').config()
 
 const process_name = 'CRM.Ticket.Assignment',
-base_url = `https://cloud.uipath.com/${process.env.tm_org_name}/${process.env.tm_tenant_name}/orchestrator_`
+base_url = `https://cloud.uipath.com/${process.env.org_name}/${process.env.tenant_name}/orchestrator_`
 
 let access_token='',
     release_key='',
-    access_token_req_data = `grant_type=client_credentials&client_id=${process.env.tm_client_id}&client_secret=${process.env.tm_client_secret}&scope=OR.Execution+OR.Folders+OR.Jobs+OR.Machines+OR.Queues+OR.Robots`
+    access_token_req_data = `grant_type=client_credentials&client_id=${process.env.client_id}&client_secret=${process.env.client_secret}`
 
 exports.handler = async (event, context) => {
     try {
@@ -24,10 +24,10 @@ exports.handler = async (event, context) => {
         console.log('access_token: ', access_token)
         
         /* GET RELEASE KEY */
-        response = await axios.get(`${base_url}/odata/Releases?$filter=ProcessKey etm_q \'${process_name_}\'`, {
+        response = await axios.get(`${base_url}/odata/Releases?$filter=ProcessKey eq \'${process_name_}\'`, {
             headers: {
                 'Authorization': `Bearer ${access_token}`,
-                'X-UIPATH-OrganizationUnitId': process.env.tm_org_unit_id
+                'X-UIPATH-OrganizationUnitId': process.env.org_unit_id
             }
         })
 
@@ -46,8 +46,8 @@ exports.handler = async (event, context) => {
         }, {
             headers: {
                 'Authorization': `Bearer ${access_token}`,
-                'X-UIPATH-OrganizationUnitId': process.env.tm_org_unit_id,
-                'X-UIPATH-Tenant': process.env.tm_tenant_name
+                'X-UIPATH-OrganizationUnitId': process.env.org_unit_id,
+                'X-UIPATH-Tenant': process.env.tenant_name
             }
         })
 
