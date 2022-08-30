@@ -41,7 +41,7 @@ exports.handler = async (event, context) => {
                 "ReleaseKey": release_key,
                 "Strategy": "ModernJobsCount",
                 "JobsCount": "1",
-                "InputArguments": `{'case_id': '${case_id}', 'case_title': '${case_title}', 'case_category': '${case_category}', 'case_type': '${case_type}', 'case_type_detail': '${case_detail}'}`
+                "InputArguments": `{'case_id': '${case_id}', 'case_title': '${case_title}', 'case_category': '${case_category}', 'case_type': '${case_type}', 'case_detail': '${case_detail}'}`
             } 
         }, {
             headers: {
