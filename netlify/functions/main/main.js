@@ -10,7 +10,7 @@ let access_token='',
 
 exports.handler = async (event, context) => {
     try {
-        let {case_id, case_title, case_category, case_type, case_type_detail} = JSON.parse(event.body)
+        let {case_id, case_title, case_category, case_type, case_detail} = JSON.parse(event.body)
 
         /* GET ACCESS TOKEN */
         let response = await axios.post('https://cloud.uipath.com/identity_/connect/token', access_token_req_data, {
@@ -41,7 +41,7 @@ exports.handler = async (event, context) => {
                 "ReleaseKey": release_key,
                 "Strategy": "ModernJobsCount",
                 "JobsCount": "1",
-                "InputArguments": `{'case_id': '${case_id}', 'case_title': '${case_title}', 'case_category': '${case_category}', 'case_type': '${case_type}', 'case_type_detail': '${case_type_detail}'}`
+                "InputArguments": `{'case_id': '${case_id}', 'case_title': '${case_title}', 'case_category': '${case_category}', 'case_type': '${case_type}', 'case_type_detail': '${case_detail}'}`
             } 
         }, {
             headers: {
@@ -56,6 +56,7 @@ exports.handler = async (event, context) => {
         }
 
         console.log(response.status, response.statusText)
+        console.log("case id: " + case_id, case_title, case_category, case_type, case_type_detail)
 
         return {
             statusCode: 204,
